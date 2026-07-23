@@ -1,0 +1,39 @@
+{
+  "variantName": "cards-teaser",
+  "baseBlock": "cards",
+  "version": "1.0.0",
+  "created": "2026-07-23T00:00:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.bcbsil.com/",
+    "originPage": "BCBSIL homepage",
+    "blockPosition": "middle"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "wide",
+    "purpose": "audience-teaser",
+    "imagePattern": "icon"
+  },
+  "contentPattern": {
+    "structure": "icon + heading + description + CTA",
+    "buttonCount": 1,
+    "imageCount": 1
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "audience/segment teaser grids",
+      "icon-based feature or category grids",
+      "3-up promotional teasers each with a CTA"
+    ],
+    "notSuitableFor": [
+      "photo-based article card grids",
+      "single feature highlights",
+      "data tables"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/index"],
+    "reuseCount": 1,
+    "lastUsed": "2026-07-23T00:00:00.000Z"
+  }
+}

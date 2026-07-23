@@ -1,0 +1,27 @@
+:root {
+  /* fonts */
+  --heading-font-family: "Open Sans", "Segoe UI", tahoma, sans-serif;
+  --body-font-family: "Open Sans", "Segoe UI", tahoma, sans-serif;
+
+  /* colors */
+  --background-color: #fff;
+  --text-color: #464645;
+  --heading-color: #00476e;
+  --link-color: #005587;
+  --link-hover-color: #007cbf;
+  --light-color: #f8f8f8;
+  --dark-color: #00476e;
+
+  /* spacing */
+  --section-padding: 40px;
+  --content-max-width: 1200px;
+  --nav-height: 121px;
+
+  /* heading sizes (desktop) */
+  --heading-size-xxl: 40px;
+  --heading-size-xl: 36px;
+  --heading-size-l: 26px;
+  --heading-size-m: 26px;
+  --heading-size-s: 20px;
+  --heading-size-xs: 18px;
+}

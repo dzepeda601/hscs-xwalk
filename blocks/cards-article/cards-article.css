@@ -1,0 +1,92 @@
+/* Block: cards-article -- article/insights card grid
+   Design extracted from source computed styles (bcbsil.com Articles and Insights). */
+
+.cards-article > ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+}
+
+@media (width >= 900px) {
+  .cards-article > ul {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 52px 68px;
+  }
+}
+
+.cards-article > ul > li {
+  display: flex;
+  flex-direction: column;
+  background-color: transparent;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+/* Image: rounded corners, cover crop.
+   The aspect-ratio box lives on the wrapper so a slow/broken image can never
+   push the card (and its section) taller than intended. */
+.cards-article .cards-article-card-image {
+  margin: 0;
+  border-radius: 8px;
+  overflow: hidden;
+  line-height: 0;
+  aspect-ratio: 375 / 246;
+}
+
+.cards-article .cards-article-card-image p {
+  margin: 0;
+  height: 100%;
+}
+
+.cards-article .cards-article-card-image picture {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.cards-article .cards-article-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0;
+}
+
+/* Body: category label + title link */
+.cards-article .cards-article-card-body {
+  margin: 0;
+}
+
+/* Category eyebrow (first paragraph) */
+.cards-article .cards-article-card-body p {
+  margin: 26px 0 24px;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  color: var(--text-color);
+}
+
+/* Title heading */
+.cards-article .cards-article-card-body h3 {
+  margin: 0;
+  font-size: 26px;
+  font-weight: 600;
+  line-height: 40px;
+  color: var(--link-hover-color);
+}
+
+/* Title link inherits the heading color, no underline */
+.cards-article .cards-article-card-body h3 a:any-link {
+  color: var(--link-hover-color);
+  text-decoration: none;
+  font-weight: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.cards-article .cards-article-card-body h3 a:hover {
+  text-decoration: underline;
+}

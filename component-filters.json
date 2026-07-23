@@ -34,6 +34,18 @@
     ]
   },
   {
+    "id": "cards-article",
+    "components": [
+      "card"
+    ]
+  },
+  {
+    "id": "cards-teaser",
+    "components": [
+      "card"
+    ]
+  },
+  {
     "id": "cards",
     "components": [
       "card"
@@ -43,6 +55,21 @@
     "id": "carousel",
     "components": [
       "carousel-item"
+    ]
+  },
+  {
+    "id": "columns-feature",
+    "components": [
+      "column"
+    ]
+  },
+  {
+    "id": "column",
+    "components": [
+      "text",
+      "image",
+      "button",
+      "title"
     ]
   },
   {
@@ -82,6 +109,12 @@
     "id": "table-4-columns",
     "components": [
       "table-col-4"
+    ]
+  },
+  {
+    "id": "tabs-network",
+    "components": [
+      "tabs-network-item"
     ]
   },
   {

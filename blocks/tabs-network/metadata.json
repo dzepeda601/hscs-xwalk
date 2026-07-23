@@ -1,0 +1,39 @@
+{
+  "variantName": "tabs-network",
+  "baseBlock": "tabs",
+  "version": "1.0.0",
+  "created": "2026-07-23T00:00:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.bcbsil.com/",
+    "originPage": "BCBSIL homepage",
+    "blockPosition": "middle"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "wide",
+    "purpose": "network-tabs",
+    "imagePattern": "large"
+  },
+  "contentPattern": {
+    "structure": "tab label + panel (heading + paragraph + CTA + image)",
+    "buttonCount": 1,
+    "imageCount": 1
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "tabbed content switchers with multiple panels",
+      "network/service category explorers",
+      "sections where each panel has heading + copy + CTA + image"
+    ],
+    "notSuitableFor": [
+      "repeating card grids",
+      "single side-by-side layouts",
+      "accordion/FAQ style collapsible content"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/index"],
+    "reuseCount": 1,
+    "lastUsed": "2026-07-23T00:00:00.000Z"
+  }
+}

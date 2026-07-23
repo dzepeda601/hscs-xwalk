@@ -1,0 +1,17 @@
+{
+  "status": "success",
+  "url": "https://www.bcbsil.com/",
+  "path": "index",
+  "timestamp": "2026-07-23T04:24:51.098Z",
+  "title": "Illinois Health Insurance | Blue Cross and Blue Shield of Illinois",
+  "template": "homepage",
+  "blocks": [
+    "hero-banner",
+    "cards-teaser",
+    "columns-feature",
+    "columns-feature",
+    "columns-feature",
+    "tabs-network",
+    "cards-article"
+  ]
+}

@@ -1,3 +1,5 @@
+@import url('brand.css');
+
 /*
  * Copyright 2020 Adobe. All rights reserved.
  * This file is licensed to you under the Apache License, Version 2.0 (the "License");
@@ -12,17 +14,7 @@
 
 :root {
   /* colors */
-  --background-color: white;
-  --light-color: #f8f8f8;
-  --dark-color: #505050;
-  --text-color: #131313;
-  --link-color: #3b63fb;
-  --link-hover-color: #1d3ecf;
-  --overlay-background-color:lightgrey;
-
-  /* fonts */
-  --body-font-family: roboto, roboto-fallback, sans-serif;
-  --heading-font-family: roboto-condensed, roboto-condensed-fallback, sans-serif;
+  --overlay-background-color: lightgrey;
 
   /* body sizes */
   --body-font-size-m: 22px;
@@ -30,30 +22,16 @@
   --body-font-size-xs: 17px;
 
   /* heading sizes */
-  --heading-font-size-xxl: 55px;
-  --heading-font-size-xl: 44px;
-  --heading-font-size-l: 34px;
-  --heading-font-size-m: 27px;
-  --heading-font-size-s: 24px;
-  --heading-font-size-xs: 22px;
+  --heading-font-size-xxl: var(--heading-size-xxl);
+  --heading-font-size-xl: var(--heading-size-xl);
+  --heading-font-size-l: var(--heading-size-l);
+  --heading-font-size-m: var(--heading-size-m);
+  --heading-font-size-s: var(--heading-size-s);
+  --heading-font-size-xs: var(--heading-size-xs);
 
   /* nav heights */
-  --nav-height: 64px;
   --breadcrumbs-height: 34px;
   --header-height: var(--nav-height);
-}
-
-/* fallback fonts */
-@font-face {
-  font-family: roboto-condensed-fallback;
-  size-adjust: 88.82%;
-  src: local('Arial');
-}
-
-@font-face {
-  font-family: roboto-fallback;
-  size-adjust: 99.529%;
-  src: local('Arial');
 }
 
 @media (width >= 900px) {
@@ -62,14 +40,6 @@
     --body-font-size-m: 18px;
     --body-font-size-s: 16px;
     --body-font-size-xs: 14px;
-
-    /* heading sizes */
-    --heading-font-size-xxl: 45px;
-    --heading-font-size-xl: 36px;
-    --heading-font-size-l: 28px;
-    --heading-font-size-m: 22px;
-    --heading-font-size-s: 20px;
-    --heading-font-size-xs: 18px;
   }
 }
 
@@ -116,15 +86,26 @@ h6 {
   margin-top: 0.8em;
   margin-bottom: 0.25em;
   font-family: var(--heading-font-family);
-  font-weight: 600;
-  line-height: 1.25;
+  font-weight: 700;
+  line-height: 1.3;
+  color: var(--heading-color);
   scroll-margin: 40px;
 }
 
 h1 { font-size: var(--heading-font-size-xxl); }
 h2 { font-size: var(--heading-font-size-xl); }
-h3 { font-size: var(--heading-font-size-l); }
-h4 { font-size: var(--heading-font-size-m); }
+
+h3 {
+  font-size: var(--heading-font-size-l);
+  font-weight: 400;
+  color: var(--text-color);
+}
+
+h4 {
+  font-size: var(--heading-font-size-m);
+  font-weight: 600;
+}
+
 h5 { font-size: var(--heading-font-size-s); }
 h6 { font-size: var(--heading-font-size-xs); }
 
@@ -181,42 +162,60 @@ button {
   display: inline-block;
   max-width: 100%;
   margin: 12px 0;
-  border: 2px solid transparent;
-  border-radius: 2.4em;
-  padding: 0.5em 1.2em;
+  border: 1px solid var(--link-hover-color);
+  border-radius: 64px;
+  padding: 12px 24px;
   font-family: var(--body-font-family);
   font-style: normal;
-  font-weight: 500;
+  font-weight: 400;
+  font-size: 16px;
   line-height: 1.25;
   text-align: center;
   text-decoration: none;
-  background-color: var(--link-color);
+  background-color: var(--link-hover-color);
   color: var(--background-color);
   cursor: pointer;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 a.button:hover,
 a.button:focus,
 button:hover,
 button:focus {
-  background-color: var(--link-hover-color);
+  background-color: var(--background-color);
+  color: var(--link-hover-color);
   cursor: pointer;
 }
 
 button:disabled,
 button:disabled:hover {
   background-color: var(--light-color);
+  color: var(--background-color);
   cursor: unset;
 }
 
 a.button.secondary,
 button.secondary {
-  background-color: unset;
-  border: 2px solid currentcolor;
+  background-color: transparent;
+  border: 1px solid currentcolor;
   color: var(--text-color);
+}
+
+/* buttons on dark sections */
+.section.dark a.button:any-link,
+.section.dark button {
+  background-color: transparent;
+  border-color: #fff;
+  color: #fff;
+}
+
+.section.dark a.button:hover,
+.section.dark button:hover {
+  background-color: #fff;
+  color: var(--link-hover-color);
 }
 
 main img {
@@ -263,4 +262,100 @@ main .section.highlight {
   background-color: var(--light-color);
   margin: 0;
   padding: 40px 0;
+}
+
+main .section.dark,
+main .section.dark-blue {
+  background-color: var(--dark-color);
+  color: #fff;
+  margin: 0;
+  padding: 40px 0;
+}
+
+main .section.dark h1,
+main .section.dark h2,
+main .section.dark h3,
+main .section.dark h4,
+main .section.dark h5,
+main .section.dark h6,
+main .section.dark-blue h1,
+main .section.dark-blue h2,
+main .section.dark-blue h3,
+main .section.dark-blue h4,
+main .section.dark-blue h5,
+main .section.dark-blue h6 {
+  color: #fff;
+}
+
+main .section.dark a:any-link,
+main .section.dark-blue a:any-link {
+  color: #fff;
+}
+
+/* Centered section intros (eyebrow + heading) preceding blocks,
+   matching the source layout for teaser, tabs, article and producer sections. */
+main .cards-teaser-container > .default-content-wrapper,
+main .tabs-network-container > .default-content-wrapper,
+main .cards-article-container > .default-content-wrapper,
+main .section.dark-blue > .default-content-wrapper {
+  max-width: var(--content-max-width);
+  margin-inline: auto;
+  padding: 0 24px;
+  text-align: center;
+}
+
+/* Eyebrow label above section headings (short all-caps intro paragraph) */
+main .tabs-network-container > .default-content-wrapper > p:first-child,
+main .cards-article-container > .default-content-wrapper > p:first-child {
+  margin: 0 0 4px;
+  color: var(--link-hover-color);
+  font-weight: 600;
+  font-size: var(--body-font-size-xs);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+/* Producer banner (dark-blue): centered content with generous padding */
+main .section.dark-blue > .default-content-wrapper p {
+  max-width: 820px;
+  margin-inline: auto;
+}
+
+/* Jump-link navigation: the bare content section (no block container)
+   holds the in-page anchor list. Render it as a horizontal nav bar and
+   suppress the stray label + duplicate list from the import. */
+main > .section:not([class*="-container"]) > .default-content-wrapper {
+  max-width: var(--content-max-width);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+main > .section:not([class*="-container"]) > .default-content-wrapper > ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 32px;
+  margin: 0;
+  padding: 12px 0;
+  list-style: none;
+}
+
+main > .section:not([class*="-container"]) > .default-content-wrapper > p:first-child,
+main > .section:not([class*="-container"]) > .default-content-wrapper > ul:last-child {
+  display: none;
+}
+
+main > .section:not([class*="-container"]) > .default-content-wrapper > ul > li {
+  margin: 0;
+  padding: 8px 0;
+  color: var(--link-color);
+  font-weight: 600;
+  font-size: var(--body-font-size-xs);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+main > .section:not([class*="-container"]) > .default-content-wrapper > ul > li:first-child {
+  color: var(--link-hover-color);
+  border-bottom: 2px solid var(--link-hover-color);
 }

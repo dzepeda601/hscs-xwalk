@@ -1,0 +1,81 @@
+/* columns-feature -- 2-column feature: text + image side by side (image right).
+   Values extracted from bcbsil.com #AboutUs .cmp-grid-container--2col (7-5 layout). */
+
+/* Row: mobile-first stacked, image first */
+.columns-feature > div {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* Cells */
+.columns-feature > div > div {
+  order: 1;
+}
+
+/* Image column */
+.columns-feature > div > .columns-feature-img-col {
+  order: 0;
+}
+
+.columns-feature img {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* Text content spacing */
+.columns-feature p {
+  margin: 0 0 16px;
+  font-size: var(--body-font-size-s);
+  line-height: 1.5;
+}
+
+.columns-feature p:last-child {
+  margin-bottom: 0;
+}
+
+/* Eyebrow label: short paragraph directly above the heading
+   (e.g. "JOIN OUR TEAM") -- small, uppercase, tight to heading */
+.columns-feature p.columns-feature-eyebrow {
+  margin-bottom: 8px;
+  font-size: var(--body-font-size-xs);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+/* Buttons keep the global pill treatment; ensure they sit on their own line */
+.columns-feature .button-container {
+  margin: 24px 0 0;
+}
+
+/* Guard: the producer variant contains an empty first cell + video-player
+   markup. Hide the empty cell so it does not add a blank column. */
+.columns-feature > div > div:empty {
+  display: none;
+}
+
+@media (width >= 900px) {
+  .columns-feature > div {
+    flex-direction: row;
+    align-items: center;
+    gap: 32px;
+  }
+
+  /* 7-5 split: text ~58%, image ~42% */
+  .columns-feature > div > div {
+    flex: 1 1 0;
+    order: unset;
+  }
+
+  .columns-feature > div > div:not(.columns-feature-img-col) {
+    flex: 0 1 57.6%;
+  }
+
+  .columns-feature > div > .columns-feature-img-col {
+    flex: 0 1 41.2%;
+    order: unset;
+  }
+}

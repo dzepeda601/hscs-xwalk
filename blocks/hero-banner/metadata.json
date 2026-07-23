@@ -1,0 +1,39 @@
+{
+  "variantName": "hero-banner",
+  "baseBlock": "hero",
+  "version": "1.0.0",
+  "created": "2026-07-23T00:00:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.bcbsil.com/",
+    "originPage": "BCBSIL homepage",
+    "blockPosition": "top"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "dark",
+    "density": "spacious",
+    "purpose": "hero",
+    "imagePattern": "large"
+  },
+  "contentPattern": {
+    "structure": "image + heading + subheading + CTA",
+    "buttonCount": 1,
+    "imageCount": 1
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "landing page top banners",
+      "dark-themed hero banners with photography",
+      "prominent above-the-fold intros with a single CTA"
+    ],
+    "notSuitableFor": [
+      "text-only intros without imagery",
+      "mid-page content sections",
+      "light minimal heroes"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/index"],
+    "reuseCount": 1,
+    "lastUsed": "2026-07-23T00:00:00.000Z"
+  }
+}

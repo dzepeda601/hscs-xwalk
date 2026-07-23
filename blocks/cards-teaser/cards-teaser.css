@@ -1,0 +1,108 @@
+/* Block: cards-teaser -- centered 3-column icon teaser grid
+   Values extracted from source computed styles on bcbsil.com */
+
+.cards-teaser > ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+}
+
+@media (width >= 900px) {
+  .cards-teaser > ul {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+}
+
+.cards-teaser > ul > li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 0 8px;
+  gap: 16px;
+  border: none;
+  background: none;
+}
+
+/* Icon image cell */
+.cards-teaser .cards-teaser-card-image {
+  margin: 0;
+  line-height: 0;
+}
+
+.cards-teaser .cards-teaser-card-image p {
+  margin: 0;
+}
+
+.cards-teaser .cards-teaser-card-image img {
+  width: 90px;
+  height: 90px;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+  border-radius: 0;
+}
+
+/* Text cell */
+.cards-teaser .cards-teaser-card-body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Title (authored as h3) -- source proposition: 22px / 600 / #464645 */
+.cards-teaser .cards-teaser-card-body h3 {
+  margin: 0 0 8px;
+  font-family: var(--body-font-family);
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 1.4;
+  color: var(--text-color);
+  text-align: center;
+}
+
+.cards-teaser .cards-teaser-card-body p {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--text-color);
+  text-align: center;
+}
+
+.cards-teaser .cards-teaser-card-body p + p {
+  margin-top: 8px;
+}
+
+/* Link -- source is a plain text link, not a pill button.
+   Reset EDS button auto-decoration back to a simple link. */
+.cards-teaser .cards-teaser-card-body p.button-container {
+  margin-top: 8px;
+}
+
+.cards-teaser .cards-teaser-card-body a.button:any-link {
+  display: inline;
+  margin: 0;
+  padding: 0;
+  border: none;
+  border-radius: 0;
+  background: none;
+  color: var(--link-color);
+  font-family: var(--body-font-family);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  text-decoration: none;
+  white-space: normal;
+  overflow: visible;
+}
+
+.cards-teaser .cards-teaser-card-body a.button:hover,
+.cards-teaser .cards-teaser-card-body a.button:focus {
+  background: none;
+  color: var(--link-hover-color);
+  text-decoration: underline;
+}

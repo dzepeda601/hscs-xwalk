@@ -1,0 +1,39 @@
+{
+  "variantName": "columns-feature",
+  "baseBlock": "columns",
+  "version": "1.0.0",
+  "created": "2026-07-23T00:00:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.bcbsil.com/",
+    "originPage": "BCBSIL homepage",
+    "blockPosition": "middle"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "mixed",
+    "density": "wide",
+    "purpose": "text-plus-media-feature",
+    "imagePattern": "large"
+  },
+  "contentPattern": {
+    "structure": "text column + media/image column",
+    "buttonCount": 1,
+    "imageCount": 1
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "text-plus-media side-by-side feature sections",
+      "member/account spotlight with video",
+      "careers and about-us teasers with image + copy + CTA"
+    ],
+    "notSuitableFor": [
+      "repeating card grids",
+      "interactive tabbed content",
+      "single-column text blocks"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/index"],
+    "reuseCount": 3,
+    "lastUsed": "2026-07-23T00:00:00.000Z"
+  }
+}

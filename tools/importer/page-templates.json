@@ -1,0 +1,121 @@
+{
+  "metadata": {
+    "projectType": "xwalk"
+  },
+  "templates": [
+    {
+      "name": "homepage",
+      "urls": [
+        "https://www.bcbsil.com/"
+      ],
+      "representativeUrl": "https://www.bcbsil.com/",
+      "coverageGaps": [],
+      "description": "BCBSIL homepage: hero banner, jump-link nav, audience teaser grid (Individual/Medicare/Medicaid), producer banner, member account spotlight, network tabs, careers callout, articles/insights grid, and about us section.",
+      "blocks": [
+        {
+          "name": "hero-banner",
+          "instances": ["#main-content div.hero.cmp-hero--color-dark-blue"]
+        },
+        {
+          "name": "cards-teaser",
+          "instances": ["#SmartChoice div.grid-container.cmp-grid-container--3col"]
+        },
+        {
+          "name": "columns-feature",
+          "instances": [
+            "#main-content > div.aem-Grid > div.section.cmp-section--background-color-white:nth-of-type(7) div.teaser.cmp-teaser--position-right",
+            "#main-content > div.aem-Grid > div.section.cmp-section--background-color-dark-blue:nth-of-type(9) div.teaser.cmp-teaser--position-left",
+            "#AboutUs div.grid-container.cmp-grid-container--2col"
+          ]
+        },
+        {
+          "name": "tabs-network",
+          "instances": ["#OurNetwork div.tabs"]
+        },
+        {
+          "name": "cards-article",
+          "instances": ["#ArticlesandInsights section.cmp-article-grid"]
+        },
+        {
+          "name": "section-producer-banner",
+          "instances": ["#main-content > div.aem-Grid > div.section.cmp-section--background-color-dark-blue:nth-of-type(6)"],
+          "section": "dark-blue"
+        }
+      ],
+      "sections": [
+        {
+          "id": "hero",
+          "name": "Hero",
+          "selector": "#main-content div.hero.cmp-hero--color-dark-blue",
+          "style": null,
+          "blocks": ["hero-banner"],
+          "defaultContent": []
+        },
+        {
+          "id": "jump-link-nav",
+          "name": "Jump Link Navigation",
+          "selector": "#main-content div.jump-link-navigation",
+          "style": null,
+          "blocks": [],
+          "defaultContent": ["#main-content div.jump-link-navigation"]
+        },
+        {
+          "id": "smart-choice",
+          "name": "Smart Choice",
+          "selector": "#SmartChoice",
+          "style": "light",
+          "blocks": ["cards-teaser"],
+          "defaultContent": ["#SmartChoice div.cmp-title h2"]
+        },
+        {
+          "id": "producer-banner",
+          "name": "Producer Banner",
+          "selector": "#main-content > div.aem-Grid > div.section.cmp-section--background-color-dark-blue:nth-of-type(6)",
+          "style": "dark-blue",
+          "blocks": [],
+          "defaultContent": ["#main-content > div.aem-Grid > div.section.cmp-section--background-color-dark-blue:nth-of-type(6) h2"]
+        },
+        {
+          "id": "member-spotlight",
+          "name": "Member Spotlight",
+          "selector": "#main-content > div.aem-Grid > div.section.cmp-section--background-color-white:nth-of-type(7)",
+          "style": null,
+          "blocks": ["columns-feature"],
+          "defaultContent": []
+        },
+        {
+          "id": "our-network",
+          "name": "Our Network",
+          "selector": "#OurNetwork",
+          "style": "light",
+          "blocks": ["tabs-network"],
+          "defaultContent": ["#OurNetwork div.cmp-title"]
+        },
+        {
+          "id": "careers",
+          "name": "Careers",
+          "selector": "#main-content > div.aem-Grid > div.section.cmp-section--background-color-dark-blue:nth-of-type(9)",
+          "style": null,
+          "blocks": ["columns-feature"],
+          "defaultContent": []
+        },
+        {
+          "id": "articles-insights",
+          "name": "Articles and Insights",
+          "selector": "#ArticlesandInsights",
+          "style": "light",
+          "blocks": ["cards-article"],
+          "defaultContent": ["#ArticlesandInsights div.cmp-title"]
+        },
+        {
+          "id": "about-us",
+          "name": "About Us",
+          "selector": "#AboutUs",
+          "style": null,
+          "blocks": ["columns-feature"],
+          "defaultContent": []
+        }
+      ]
+    }
+  ]
+}
